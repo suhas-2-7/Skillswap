@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpeg" href="{{ url_for('static', filename='logo.jpg') }}">
+    <title>Skill Swap Form</title>
+    <link rel="stylesheet" href="../static/css/form-style.css">
+</head>
+<body>
+    <h1 class="form-title">Register Your Profile</h1>
+
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+
+    <form action="/" method="POST" class="registration-form">
+        <label for="name" class="form-label">Name:</label>
+        <input type="text" id="name" name="name" class="form-input" required><br>
+
+        <label for="location" class="form-label">Location (optional):</label>
+        <input type="text" id="location" name="location" class="form-input"><br>
+
+        <label for="skills_offered" class="form-label">Skills You Offer:</label>
+        <textarea id="skills_offered" name="skills_offered" class="form-textarea" required></textarea><br>
+
+        <label for="skills_wanted" class="form-label">Skills You Want:</label>
+        <textarea id="skills_wanted" name="skills_wanted" class="form-textarea" required></textarea><br>
+
+        <label class="form-label">Availability:</label><br>
+        <input type="checkbox" id="weekends" name="availability" value="Weekends">
+        <label for="weekends">Weekends</label><br>
+        <input type="checkbox" id="evenings" name="availability" value="Evenings">
+        <label for="evenings">Evenings</label><br>
+        <input type="checkbox" id="mornings" name="availability" value="Mornings">
+        <label for="mornings">Mornings</label><br><br>
+
+        <label for="public_profile" class="form-label">Make Profile Public:</label>
+        <select id="public_profile" name="public_profile" class="form-input">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select><br>
+
+        <label for="profile_picture" class="form-label">Profile Picture URL (optional):</label>
+        <input type="text" id="profile_picture" name="profile_picture" class="form-input"><br>
+
+        <label for="contact" class="form-label">Contact:</label>
+        <input type="text" id="contact" name="contact" class="form-input" required><br>
+
+        <label for="email" class="form-label">Email:</label>
+        <input type="email" id="email" name="email" class="form-input" required><br>
+
+        <label for="password" class="form-label">Password:</label>
+        <input type="password" id="password" name="password" class="form-input" required><br>
+
+        <button type="submit" class="form-button">Register</button>
+    </form>
+
+    <p class="login-text">Already have an account? 
+        <a href="/login" class="login-link" style="text-decoration: none; color: rgb(255, 0, 208); font-weight: 600;">Login here</a>
+    </p>
+</body>
+</html>
