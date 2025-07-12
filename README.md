@@ -84,10 +84,10 @@ skill-swap/
 
 ## 🤝 Contributions By
 
-The team : -K P SUHAS
-           -T KRISHNA KARTHEEK
-           -NISCHITHA N
-           -V DHATRISH
+The team : - K P SUHAS
+           - T KRISHNA KARTHEEK
+           - NISCHITHA N
+           - V DHATRISH
 
 ---
 
